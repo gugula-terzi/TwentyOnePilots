@@ -1,0 +1,373 @@
+@font-face {
+    font-family: "Choco";
+    src: url('../fonts/Choco.woff') format('woff');
+}
+
+@font-face { 
+    font-family: 'Merriweather'; 
+    src: url('../fonts/MerriweatherSans-Regular.woff') format('woff');
+}
+
+@font-face { 
+    font-family: 'Cross Town'; 
+    src: url('../fonts/CrossTown.woff') format('woff');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+main {
+    min-width: 100vh;
+    min-height: 100vw;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.to-up {
+    position: fixed;
+    width: 128px;
+    height: 128px;
+    bottom: 28px;
+    right: 28px;
+    z-index: 22;
+    cursor: pointer;
+    background: url('../images/top_button.png') no-repeat;
+    transition: 1s ease;
+    visibility: hidden;
+	opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+    right: calc(2%);
+}
+
+header {
+    min-width: 100vh;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    background: url('../images/twenty_one_pilots.jpg');
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    animation: fade-in 1s ease;
+}
+
+header .banner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    height: 50rem;
+    align-items: flex-end;
+    overflow: hidden;
+    animation: fade-in 1s ease;
+}
+
+.group_name  {
+    color: #383838;
+    font-family: "Cross Town";
+    font-size: 160px;
+    letter-spacing: 10px;
+    position: absolute;
+    transform: rotateZ(1deg);
+    z-index: 1;
+    margin: auto;
+    bottom: 100px;
+    cursor: default;
+}
+
+.text_bg {
+    position: absolute;
+    z-index: 0;
+    margin: auto;
+}
+
+header a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    letter-spacing: 1px;
+    margin: 0 20px;
+    font-size: 40px;
+    font-family: 'Choco', cursive;
+    transition: .3s ease-in-out;
+    color: rgba(255, 255, 255, 0.8);
+ }
+ 
+.navPanel {
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 25px auto;
+}
+
+.navPanel ul li {
+    color: #34495e;
+    line-height: 1.2;
+    position: relative;
+    padding: 0 14px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.navPanel ul li a:hover {
+    /*color: rgb(252, 92, 92);*/
+    color: #FFF15A;
+    transform: scale(1.01) translateY(-5px);
+    transition: 0.5s ease-out;
+}
+
+.main_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tyler_bio {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 50px 0;
+}
+
+.tyler_bio::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../images/black_paper.jpg');
+    transform: rotateZ(180deg);
+    border-bottom: #fff 5px dashed;
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+.tyler_bio .bio {
+    margin: 50px;
+}
+
+.tyler_bio .bio .name {
+    font-family: "Cross Town";
+    font-size: 64px;
+    margin-bottom: 50px;
+}
+
+.tyler_bio .bio .text {
+    font-family: "Century Gothic";
+    font-size: 34px;
+    text-align: justify;
+    margin-right: 50px;
+}
+
+.tyler_bio_img img{
+    display: flex;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    margin: 50px;
+    border: #fff 5px solid;
+    box-shadow: 0px 5px 10px 2px rgba(255, 253, 127, 0.3);
+}
+
+.josh_bio {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: #fff;
+    border-top: white 5px dashed;
+    background: url('../images/black_paper.jpg');
+    box-shadow: 0px 8px 5px -5px transparent inset;
+}
+
+.josh_bio .bio {
+    margin: 50px;
+}
+
+.josh_bio .bio .name {
+    font-family: "Cross Town";
+    font-size: 64px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+
+.josh_bio .bio .text {
+    font-family: "Century Gothic";
+    font-size: 34px;
+    text-align: justify;
+    margin-left: 50px;
+}
+
+.josh_bio_img {
+    margin: 50px;
+}
+
+.josh_bio_img img {
+    display: flex;
+    margin: 50px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    margin: 50px auto;
+    border: #fff 5px solid;
+    box-shadow: 0px 5px 10px 2px rgba(255, 253, 127, 0.3);
+}
+
+.more_info {
+    margin-top: 20px;
+}
+
+.more_info a{
+    text-decoration: none;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: underline;
+}
+
+#songs {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    background: url('../images/twenty_one_pilots_concert.jpg') no-repeat;
+    box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.5) inset;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Audio Player Styles */
+.cont {
+    font-family: "Choco";
+    font-size: 24px;
+    margin: 0 40px;
+}
+
+.song {
+    width: 550px;
+    height: 140px;
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    background: url('../images/track_bg.png') no-repeat;
+}
+
+.audio {
+    margin: 0 55px;
+    outline: none;
+}
+
+audio::-webkit-media-controls-panel{
+    background: #FFF159;
+}
+
+#videos {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    background: url('../images/black_paper.jpg');
+    box-shadow: 0px -5px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+#videos .video {
+    width: 760px;
+    height: 427.5px;
+    margin: 50px;
+    border-radius: 20px;
+    border: rgb(255, 243, 136) 2px solid;
+    box-shadow: 0 0 10px 0 rgb(247, 255, 139);
+}
+
+#links {
+    width: 100%;
+    height: 365px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('../images/links_bg.png');
+}
+
+#links .title {
+    font-size: 80px;
+    font-family: 'Choco';
+    color: rgb(60, 60, 60);
+}
+
+#links ul {
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#links a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 50px;
+    margin: 0 20px;
+    font-size: 64px;
+    font-family: 'Choco';
+    transition: .3s ease-in-out;
+    color: rgb(60, 60, 60);
+}
+
+#links a:hover {
+    /*color: rgb(252, 92, 92);*/
+    color: #A81817;
+    transform: scale(1.01) translateY(-5px);
+    transition: 0.5s ease-out;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

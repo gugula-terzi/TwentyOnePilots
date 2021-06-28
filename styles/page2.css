@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Patua';
+    src: url('../fonts/PatuaOne-Regular.woff');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s cubic-bezier(.2,.49,.75,.5);
+}
+
+#flags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.flag {
+    width: 400px;
+    height: 250px;
+    margin: 25px;
+    border-radius: 20px;
+    transition: 1s;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+.flag img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;    
+}
+
+.hovered .flag{
+    filter: blur(3px);
+    opacity: 0.5;
+    transform: scale(.98);
+    box-shadow: none;
+    transition: 0.5s cubic-bezier(.51,.35,.48,.62);
+}
+
+
+.hovered .flag:hover{
+    transform: scale(1.08);
+    filter: blur(0px);
+    opacity: 1;
+    box-shadow: 0 8px 20px 0px rgba(0,0,0,0.125);
+}
+
+.flag span {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Patua";
+    font-size: 18px;
+    width: 100%;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    transform: translateZ(100px);
+    transition: 0.5s;
+}
+
+.flag span a {
+    text-decoration: none;
+    color: white;
+}
+
+.flag:hover span {
+    transition: 0.5s cubic-bezier(.51,.35,.48,.62);
+    transform: translateY(-44px)
+}
